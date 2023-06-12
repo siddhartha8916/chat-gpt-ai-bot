@@ -2,7 +2,7 @@ import React from 'react'
 import Layout from '../../components/Layout'
 import Link from 'next/link';
 
-const Register = () => {
+const RegisterPage = () => {
 
   const handleSubmit = () => {
     console.log('Register');
@@ -41,4 +41,4 @@ const Register = () => {
   )
 }
 
-export default Register
+export default RegisterPage

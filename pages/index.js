@@ -1,15 +1,18 @@
 import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import Script from 'next/script'
+import HeroSection from '../components/HeroSection'
 
 export default function Home() {
   return (
     <div>
       <Head>
-        <title>AI-Chatbot Chat-GPT</title>
-        <meta name="description" content="AI Chatbot generated using OPEN-AI" />
+        <title>OpenAI ChatBot</title>
+        <meta name="description" content="OpenAI ChatBot" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-     
+      <Navbar />
+      <HeroSection/>
     </div>
   )
 }
