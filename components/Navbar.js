@@ -15,7 +15,7 @@ const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link className="nav-link active" href="/account/login">
-                OpenAI ChatBot
+                Login
               </Link>
             </li>
             <li className="nav-item">
