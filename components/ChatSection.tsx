@@ -2,13 +2,8 @@ import React, { useState, useEffect } from "react";
 import Layout from "./Layout";
 import { useCookies } from "react-cookie";
 import { ChatLine, LoadingChatLine } from "./ChatLine";
+import { ChatGPTMessage } from "../helpers/OpenAIStream";
 
-type ChatGPTAgent = "user" | "system" | "assistant";
-
-export interface ChatGPTMessage {
-  role: ChatGPTAgent;
-  content: string;
-}
 
 const COOKIE_NAME = "academy-ai-chat-gpt3";
 
