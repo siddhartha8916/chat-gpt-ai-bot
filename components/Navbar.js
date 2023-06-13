@@ -14,12 +14,19 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <Link className="nav-link active" href="/account/login">
-                Login
+              <Link className="nav-link" href="/account/login">
+                Academy Login
               </Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
+              <Link className="nav-link" href="/account/login">
+                Academy Register
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" href="/chat">
+                Chat With AcademyAI
+              </Link>
             </li>
             <li className="nav-item dropdown">
               <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -31,9 +38,6 @@ const Navbar = () => {
                 <li><hr className="dropdown-divider" /></li>
                 <li><a className="dropdown-item" href="#">Something else here</a></li>
               </ul>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
             </li>
           </ul>
           <form className="d-flex" role="search">
