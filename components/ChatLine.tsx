@@ -25,7 +25,7 @@ export function ChatLine({ role = "assistant", content }: ChatGPTMessage) {
 
   return (
     <div>
-      <a href="#" className="hover:underline">
+      <a href="#" className={role == "assistant" ? 'text-primary fw-bold' : "text-warning fw-bold"}>
         {role == "assistant" ? "AI" : "You"}
       </a>
       <p>{formatteMessage}</p>

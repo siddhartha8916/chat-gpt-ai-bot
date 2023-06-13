@@ -33,11 +33,6 @@ const ChatSection = () => {
     }
   }, []);
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert(promptText);
-  };
-
   const sendMessage = async (message: string) => {
     setLoading(true);
     const newMessages = [
@@ -94,7 +89,7 @@ const ChatSection = () => {
 
   return (
     <Layout>
-      <div className="card">
+      <div className="card shadow bg-body-tertiary rounded">
         <h4 className="card-header">Chat With AcademyAI</h4>
         <div className="card-body">
           {messages.map(({ content, role }, index) => (
@@ -102,7 +97,7 @@ const ChatSection = () => {
           ))}
           {loading && <LoadingChatLine />}
           {messages.length < 2 && (
-            <span>Type a message to start the conversation</span>
+            <span className="fw-bold">Type a message to start the conversation</span>
           )}
         </div>
         <div className="card-body">
