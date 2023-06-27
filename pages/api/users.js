@@ -13,8 +13,8 @@ export default async function handler(req, res) {
 
   if (req.method === 'POST') {
     try {
-      const newUser = await userCollection.addNewUser(req.body)
-      res.status(200).json({ newUser });
+      const response = await userCollection.addNewUser(req.body)
+      res.status(200).json({ response });
     } catch (error) {
       console.error("Error adding user:", error);
       res.status(500).json({ error: "Failed to add user" });

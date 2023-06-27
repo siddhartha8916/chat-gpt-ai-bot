@@ -1,7 +1,8 @@
 import React from 'react'
-import Link from 'next/link';
+
 
 import Layout from './Layout'
+import CustomLink from './CustomLink';
 
 const LoginUser = () => {
   
@@ -11,7 +12,7 @@ const LoginUser = () => {
   
   return (
     <Layout>
-      <div className="card">
+      <div className="card col-md-4 offset-md-4">
         <h4 className="card-header">Login</h4>
         <div className="card-body">
           <form onSubmit={handleSubmit}>
@@ -26,7 +27,7 @@ const LoginUser = () => {
             <button className="btn btn-primary">
               Login
             </button>
-            <Link href="/account/register" className="btn btn-link">Register</Link>
+            <CustomLink href="/account/register" className="btn btn-link">Register</CustomLink>
           </form>
         </div>
       </div>

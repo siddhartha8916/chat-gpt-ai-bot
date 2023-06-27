@@ -10,7 +10,7 @@ const userModel = () => {
       type: String,
       required: true,
     },
-    name: {
+    fullname: {
       type: String,
       required: true,
     },

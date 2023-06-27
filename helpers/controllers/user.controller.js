@@ -23,7 +23,10 @@ async function addNewUser(user) {
 
     // validate
     if (await db.User.findOne({ username: user.username })) {
-      throw 'Username "' + user.username + '" is already taken';
+      return {
+        status:null,
+        message:'Username "' + user.username + '" is already taken'
+      };
     }
 
     // hash password
@@ -35,7 +38,10 @@ async function addNewUser(user) {
     // save user
     await newUser.save();
 
-    return newUser;
+    return {
+      status:'Ok',
+      message:'User Added Successfully'
+    };
 
   } catch (error) {
     console.error("Error adding user:", error);
